@@ -1,0 +1,320 @@
+.section {
+    position: relative;
+}
+
+.title {
+    font-size: 48px;
+    color: #e7e7e7;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px 20px 228px;
+}
+
+.footballer::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/footballer_192.png);
+    background-repeat: no-repeat;
+    top: 90px;
+    right: 0;
+    bottom: 0;
+    left: 65px;
+}
+
+.basketballer::after {
+    content: "";
+    position: absolute;
+    background-image: url(../images/basketballer_302.png);
+    background-repeat: no-repeat;
+    top: 90px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper:nth-child(1) {
+    background-color: #fafafa;
+    padding-top: 20px;
+}
+
+.content-wrapper:nth-child(2) {
+    background-color: #f5f4f9;
+    ;
+}
+
+.content-wrapper:nth-child(3) {
+    background-color: #5e42b0;
+}
+
+.content-wrapper.other-color {
+    background-color: #090c35;
+}
+
+.content {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.subtitle-box {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.number {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000000;
+    position: relative;
+    display: block;
+}
+
+.number::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 15px;
+    height: 4px;
+    border-radius: 1px;
+    background-color: #5e42b0;
+}
+
+.number.other-color {
+    color: #8765dd;
+}
+
+.number.other-color::after {
+    background-color: #ffffff;
+}
+
+.subtitle {
+    margin-left: 6px;
+    font-size: 23px;
+    color: #c1c1c1;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.text {
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+
+.text.other-color {
+    color: #ffffff;
+}
+
+/* ===================================================================================================
+                Версия для планшета                      */
+
+@media (min-width: 641px) and (max-width: 960px) {
+    .title {
+        padding: 50px 32px 0;
+        font-size: 80px;
+    }
+    .title.athlets, .content.athlets {
+        /* Повышаю, чтобы применились стили */
+        padding-left: 38%;
+    }
+    .title.players, .content.players {
+        padding-right: 35%;
+    }
+    .footballer::after {
+        background-image: url(../images/footballer_497.png);
+        top: 100px;
+        left: -165px;
+    }
+    .basketballer::after {
+        background-image: url(../images/basketballer_436.png);
+        width: 436px;
+        top: 35px;
+        right: 0;
+        left: calc( 100vw - 436px);
+        bottom: 0;
+    }
+    .content-wrapper:nth-child(1) {
+        background-color: #ffffff;
+        padding-top: 0;
+    }
+    .content {
+        padding-right: 32px;
+        padding-left: 32px;
+    }
+    .subtitle-box {
+        padding-top: 35px;
+        padding-bottom: 15px;
+    }
+    .number {
+        font-size: 18px;
+    }
+    .number::after {
+        width: 19px;
+        height: 5px;
+        border-radius: 2px;
+    }
+    .subtitle {
+        margin-left: 10px;
+        font-size: 32px;
+        letter-spacing: 2px;
+    }
+    .text {
+        padding-bottom: 35px;
+        line-height: 28px;
+        font-size: 18px;
+        font-weight: 700;
+    }
+}
+
+/* ================================================================================================= 
+                     Версия для десктопа                  */
+
+@media (min-width: 961px) and (max-width: 1920px) {
+    .main-content {
+        position: relative;
+    }
+    .section {
+        position: static;
+    }
+    .title {
+        padding: 90px 10% 20px;
+        font-size: 80px;
+    }
+    .title.athlets, .content.athlets {
+        padding-left: 53%;
+    }
+    .title.players, .content.players {
+        padding-right: 51%;
+    }
+    .content-wrapper:nth-child(1) {
+        background-color: #ffffff;
+        padding-top: 0;
+    }
+    .footballer::after {
+        background-image: url(../images/footballer_566.png);
+        max-width: 566px;
+        top: 40px;
+        left: calc( .3 * (100vw - 566px));
+        overflow: hidden;
+    }
+    .basketballer::after {
+        background-image: url(../images/basketballer_991.png);
+        max-width: 991px;
+        top: 930px;
+        overflow: hidden;
+        left: calc( .8 * (100vw - 991px));
+    }
+    .content {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+    .subtitle-box {
+        padding-top: 50px;
+        padding-bottom: 18px;
+    }
+    .number {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .number::after {
+        width: 19px;
+        height: 5px;
+        border-radius: 2px;
+    }
+    .subtitle {
+        margin-left: 10px;
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+    .text {
+        padding-bottom: 60px;
+        line-height: 28px;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
+
+/* ==============================================================================================
+                    Версия для широкоформатных экранов             */
+
+@media(min-width: 1921px) {
+    .main-content {
+        position: relative;
+    }
+    .section {
+        position: static;
+    }
+    .title {
+        width: 1920px;
+        padding: 90px 10% 20px;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 80px;
+        position: relative;
+    }
+    .title.athlets, .content.athlets {
+        padding-left: 53%;
+    }
+    .title.players, .content.players {
+        padding-right: 51%;
+    }
+    .content {
+        width: 1920px;
+        padding-right: 10%;
+        padding-left: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content-wrapper:nth-child(1) {
+        background-color: #ffffff;
+        padding-top: 0;
+    }
+    .footballer::after {
+        background-image: url(../images/footballer_566.png);
+        max-width: 566px;
+        height: 908px;
+        top: 40px;
+        left: 406px;
+        overflow: hidden;
+    }
+    .basketballer::after {
+        background-image: url(../images/basketballer_991.png);
+        max-width: 991px;
+        height: 815px;
+        overflow: hidden;
+        left: 743px;
+    }
+    .subtitle-box {
+        padding-top: 50px;
+        padding-bottom: 18px;
+    }
+    .number {
+        font-size: 20px;
+        line-height: 36px;
+    }
+    .number::after {
+        width: 19px;
+        height: 5px;
+        border-radius: 2px;
+    }
+    .subtitle {
+        margin-left: 10px;
+        font-size: 36px;
+        letter-spacing: 3px;
+    }
+    .text {
+        padding-bottom: 60px;
+        line-height: 28px;
+        font-size: 20px;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+}
