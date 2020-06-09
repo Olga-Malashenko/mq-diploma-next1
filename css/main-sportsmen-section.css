@@ -13,23 +13,25 @@
 .footballer::after {
     content: "";
     position: absolute;
-    background-image: url(../images/footballer_192.png);
-    background-repeat: no-repeat;
+    background-image: url("../images/footballer_192.png") no-repeat; /* при указании center спортсмены исчезают, убрала*/
     top: 90px;
     right: 0;
     bottom: 0;
     left: 65px;
+    /* width: 497px;  После указания ширины появляется полоса прокрутки, убрала
+    height: 699px;  */
 }
 
 .basketballer::after {
     content: "";
     position: absolute;
-    background-image: url(../images/basketballer_302.png);
-    background-repeat: no-repeat;
+    background-image: url("../images/basketballer_302.png") no-repeat;
     top: 90px;
     right: 0;
     bottom: 0;
-    left: 0;
+    left: 10px;
+    /* width: 436px;
+    height: 565px; */
 }
 
 .content-container {
@@ -128,17 +130,18 @@
         padding-right: 35%;
     }
     .footballer::after {
-        background-image: url(../images/footballer_497.png);
+        background: url("../images/footballer_497.png") center no-repeat;
+        width: 497px;
+        height: 699px;
         top: 100px;
         left: -165px;
     }
     .basketballer::after {
-        background-image: url(../images/basketballer_436.png);
+        background: url("../images/basketballer_436.png") center no-repeat;
         width: 436px;
+        height: 565px;
         top: 35px;
-        right: 0;
         left: calc( 100vw - 436px);
-        bottom: 0;
     }
     .content-wrapper:nth-child(1) {
         background-color: #ffffff;
@@ -198,16 +201,18 @@
         padding-top: 0;
     }
     .footballer::after {
-        background-image: url(../images/footballer_566.png);
-        max-width: 566px;
+        background: url("../images/footballer_566.png") center no-repeat;
+        width: 566px;
+        height: 908px;
         top: 40px;
         left: calc( .3 * (100vw - 566px));
         overflow: hidden;
     }
     .basketballer::after {
-        background-image: url(../images/basketballer_991.png);
+        background: url("../images/basketballer_991.png") center no-repeat;
         max-width: 991px;
-        top: 930px;
+        height: 815px;
+        top: 950px;
         overflow: hidden;
         left: calc( .8 * (100vw - 991px));
     }
@@ -278,19 +283,20 @@
         padding-top: 0;
     }
     .footballer::after {
-        background-image: url(../images/footballer_566.png);
-        max-width: 566px;
+        background: url("../images/footballer_566.png") center no-repeat;
+        width: 566px;
         height: 908px;
         top: 40px;
-        left: 406px;
+        left: calc( .3 * (100vw - 566px));
         overflow: hidden;
     }
     .basketballer::after {
-        background-image: url(../images/basketballer_991.png);
+        background: url("../images/basketballer_991.png") center no-repeat;
         max-width: 991px;
         height: 815px;
+        top: 950px;
         overflow: hidden;
-        left: 743px;
+        left: calc( .8 * (100vw - 991px));
     }
     .subtitle-box {
         padding-top: 50px;
